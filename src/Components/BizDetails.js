@@ -1,16 +1,21 @@
 // rfc
 import React from "react";
-import { Container, Chip, TableBody } from "@mui/material";
+import { Container, Chip } from "@mui/material";
+// import { useParams } from 'react-router-dom';
+import { Params } from 'react-router-dom';
+
 // import BizDetails from '../containers/BizDetails';
 
 export default function showSingleListing(props) {
-  const id = this.props.match.params.id;
+  // const { id } = useParams();
+  const id = props.match.params.id;
   console.log(id);
-  const biz = this.props.listings.find((listings) => listings.id == id);
+  const biz = props.listings.find((listings) => listings.id === id);
   console.log(biz);
 
   return (
     <div>
+
       {/* <h1>{props.biz[id].Name}</h1>
         <h2>{props.biz.Address}</h2>
         <h3>{props.biz.Hours}</h3>

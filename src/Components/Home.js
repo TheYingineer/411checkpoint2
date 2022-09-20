@@ -8,6 +8,7 @@ import {
   TableRow,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
   return (
@@ -37,7 +38,13 @@ const Home = (props) => {
               <TableCell component="th" scope="row">
                 {listing.id}
               </TableCell>
-              <TableCell>{listing["Name"]}</TableCell>
+
+              {props.listings.map((listing, idx) => (
+                <Link to={`/BizDetails/${listing.id}`}>
+                  <TableCell>{listing["Name"]} </TableCell>
+                </Link>
+              ))}
+
               <TableCell>{listing["Description"]}</TableCell>
               <TableCell>{listing["Hours"]}</TableCell>
               <TableCell>{listing["Address"]}</TableCell>

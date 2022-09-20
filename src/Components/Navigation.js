@@ -14,6 +14,7 @@ const Navigation = () => {
           mybusinessapp
         </Typography>
         <ul className="nav-list">
+        
           <li className="nav-list-item">
             <Link to="/">Listings</Link>
           </li>
@@ -23,9 +24,9 @@ const Navigation = () => {
           <li className="nav-list-item">
             <Link to="/AddNewListing">AddNewListing</Link>
           </li>
-          <li className="nav-list-item">
+          {/* <li className="nav-list-item">
             <Link to="/BizDetails">BizDetails</Link>
-          </li>
+          </li> */}
         </ul>
       </Toolbar>
     </AppBar>
