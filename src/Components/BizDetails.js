@@ -9,12 +9,12 @@ import { params } from "react-router-dom";
 const showSingleListing = (props) => {
   const id = props.match.params.id;
   console.log(id);
-  const listing = props.listings.find(l => l.id === id);
+  const listing = props.listings.find((l) => l.id === id);
   console.log(listing);
 
   return (
     <div>
-      {/* <h1>{props.listing[id].Name}</h1>
+      {/* <h1>{props.listing[id]}</h1>
         <h2>{props.listing.Address}</h2>
         <h3>{props.listing.Hours}</h3>
         <h4>{props.listing.Description}</h4>  */}
@@ -27,6 +27,6 @@ const showSingleListing = (props) => {
       </Container>
     </div>
   );
-}
+};
 
-export default showSingleListing
+export default showSingleListing;

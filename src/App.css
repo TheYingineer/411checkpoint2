@@ -1,7 +1,19 @@
+.AddNewListingBox{
+  display: flex; 
+  flex-direction: row;
+  width: auto;
+  /* border: 5px purple solid; */
+  justify-content: center;
+  
+}
+
 .AddNewListingForm {
   display: flex;
   flex-direction: column;
-  border: 5px solid green;
+  width:fit-content;
+  /* border: 5px solid green; */
+  align-items: center;
+  justify-items: center;
 }
 
 .nav-list {
@@ -24,5 +36,6 @@
 
 li {
   padding: 5px;
-  border: 5px solid burlywood;
+  /* border: 5px solid burlywood; */
+  color: white;
 }

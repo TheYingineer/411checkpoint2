@@ -7,29 +7,29 @@ import Button from '@mui/material/Button';
 
 export default function AddNewListing() {
   return (
-    <div>
+    <div class = "AddNewListingBox">
       <Box class = "AddNewListingForm">
         <TextField
           id="standard-search"
-          label="Search field"
+          label="Name"
           type="search"
           variant="standard"
         />
         <TextField
           id="standard-search"
-          label="Search field"
+          label="Description"
           type="search"
           variant="standard"
         />
         <TextField
           id="standard-search"
-          label="Search field"
+          label="Address"
           type="search"
           variant="standard"
         />
         <TextField
           id="standard-search"
-          label="Search field"
+          label="Hours"
           type="search"
           variant="standard"
         />

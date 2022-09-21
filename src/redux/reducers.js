@@ -15,9 +15,8 @@ const listings = (state = [], action) => {
     default:
       return state;
 
-    case "SHOW_SINGLE_LISTING"://ADD NEW*
-      return [...state, action.value];
-
+    case "SHOW_SINGLE_LISTING": //ADD NEW*
+      return state;
   }
 };
 
