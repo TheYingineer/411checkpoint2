@@ -39,11 +39,13 @@ const Home = (props) => {
                 {listing.id}
               </TableCell>
 
-              {props.listings.map((listing, idx) => (
-                <Link to={`/BizDetails/${listing.id}`}>
-                  <TableCell>{listing["Name"]} </TableCell>
-                </Link>
-              ))}
+              <TableCell>
+                {props.listings.map((listing, idx) => (
+                  <Link to={`/BizDetails/${listing.id}`}>
+                    <TableCell>{listing["Name"]} </TableCell>
+                  </Link>
+                ))}
+              </TableCell>
 
               <TableCell>{listing["Description"]}</TableCell>
               <TableCell>{listing["Hours"]}</TableCell>
