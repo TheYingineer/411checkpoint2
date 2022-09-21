@@ -6,10 +6,10 @@ import { params } from "react-router-dom";
 
 // import BizDetails from '../containers/BizDetails';
 
-export default function showSingleListing(props) {
+const showSingleListing = (props) => {
   const id = props.match.params.id;
   console.log(id);
-  const listing = props.listings.find((listings) => listings.id === id);
+  const listing = props.listings.find(l => l.id === id);
   console.log(listing);
 
   return (
@@ -28,3 +28,5 @@ export default function showSingleListing(props) {
     </div>
   );
 }
+
+export default showSingleListing
