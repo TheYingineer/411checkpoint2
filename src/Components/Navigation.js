@@ -1,13 +1,13 @@
 import React from "react";
 import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link, useNavigate } from "react-router-dom";
-import cookie from "cookie";
+import { Link, useNavigate } from "react-router-dom"; //for login/logout
+import cookie from "cookie"; //for login/logout
 
 const Navigation = () => {
-  const navigate = useNavigate();
-  const cookies = cookie.parse(document.cookie)
-  console.log(cookies) // this shows what the cookie looks like when you login
+  const navigate = useNavigate(); //for login/logout
+  const cookies = cookie.parse(document.cookie); //for login/logout
+  console.log(cookies); // this shows what the cookie looks like when you login
 
   return (
     <AppBar position="relative">
@@ -22,9 +22,6 @@ const Navigation = () => {
           <li className="nav-list-item">
             <Link to="/">Listings</Link>
           </li>
-          {/* <li className="nav-list-item">
-            <Link to="/login">Login</Link>
-          </li> */}
 
           {/* added the condition rendering, where when you login, 
           there will be a logout on the right. Vise versa, whne you logout, 
