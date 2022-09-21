@@ -35,17 +35,21 @@ const Home = (props) => {
         <TableBody>
           {props.listings.map((listing, idx) => (
             <TableRow key={listing.id}>
-              <TableCell component="th" scope="row">
-                {listing.id}
-              </TableCell>
+              <TableCell>{listing["id"]}</TableCell>
 
+              <Link to={`/BizDetails/${listing.id}`}>
+                {/* // line 38 & line 41,43, 44 works together as a hyperlink */}
+                <TableCell>{listing["Name"]}</TableCell>
+              </Link>
+             
+              {/*               
               <TableCell>
                 {props.listings.map((listing, idx) => (
                   <Link to={`/BizDetails/${listing.id}`}>
                     <TableCell>{listing["Name"]} </TableCell>
                   </Link>
                 ))}
-              </TableCell>
+              </TableCell> */}
 
               <TableCell>{listing["Description"]}</TableCell>
               <TableCell>{listing["Hours"]}</TableCell>

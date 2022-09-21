@@ -2,9 +2,8 @@
 import React from "react";
 import { Container, Chip } from "@mui/material";
 import { useParams } from "react-router-dom";
-// import { showSingleListing } from "../redux/actions";
+import mappic from "../images/mappic.png"
 
-// import BizDetails from '../containers/BizDetails';
 const BizDetails = (props) => {
   const id = useParams().id;
   const listing = props.listings.find((list) => list.id === Number(id));  // props.listings == the key to access the state.js in redux
@@ -14,6 +13,8 @@ const BizDetails = (props) => {
       {Object.keys(listing).map((key, idx) => {
         return <Chip key={idx} label={`${key}: ${listing[key]}`}></Chip>;
       })}
+      <img src= {mappic} alt="Map Pic" />
+
     </div>
   );
 };
