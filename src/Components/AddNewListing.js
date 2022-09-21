@@ -3,39 +3,43 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
+import { Container } from "@mui/material";
 
 export default function AddNewListing() {
   return (
-    <div class = "AddNewListingBox">
-      <Box class = "AddNewListingForm">
-        <TextField
-          id="standard-search"
-          label="Name"
-          type="search"
-          variant="standard"
-        />
-        <TextField
-          id="standard-search"
-          label="Description"
-          type="search"
-          variant="standard"
-        />
-        <TextField
-          id="standard-search"
-          label="Address"
-          type="search"
-          variant="standard"
-        />
-        <TextField
-          id="standard-search"
-          label="Hours"
-          type="search"
-          variant="standard"
-        />
+    <Container className="AddNewListContainer">
+      <div className="AddNewListingBox">
+        <Box className="AddNewListingForm">
+          <TextField
+            id="standard-search"
+            label="Name"
+            type="search"
+            variant="standard"
+          />
+          <TextField
+            id="standard-search"
+            label="Description"
+            type="search"
+            variant="standard"
+          />
+          <TextField
+            id="standard-search"
+            label="Address"
+            type="search"
+            variant="standard"
+          />
+          <TextField
+            id="standard-search"
+            label="Hours"
+            type="search"
+            variant="standard"
+          />
+        </Box>
         <Button variant="contained">SAVE</Button>
-      </Box>
-    </div>
+      </div>
+      {/* <img src="\mappic.png" alt="map pic" width="300px" /> */}
+    </Container>
   );
 }
 

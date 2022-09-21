@@ -1,18 +1,30 @@
-.AddNewListingBox{
-  display: flex; 
+* {
+  box-sizing: border-box;
+}
+
+.AddNewListContainer {
+  display: flex;
   flex-direction: row;
   width: auto;
+  /* border: 5px red solid; */
+  justify-content: center;
+}
+
+.AddNewListingBox {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
   /* border: 5px purple solid; */
   justify-content: center;
-  
 }
 
 .AddNewListingForm {
   display: flex;
   flex-direction: column;
-  width:fit-content;
+  width: fit-content;
   /* border: 5px solid green; */
   align-items: center;
+  align-content: center;
   justify-items: center;
 }
 
@@ -38,4 +50,15 @@ li {
   padding: 5px;
   /* border: 5px solid burlywood; */
   color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid pink; */
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
 }

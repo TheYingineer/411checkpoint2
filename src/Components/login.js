@@ -30,8 +30,8 @@ const Login = () => {
   };
 
   return (
-    <div className="App">
-      <Container maxWidth="sm">
+    <div className="Login">
+      <Container className = "loginConainer" maxWidth="sm">
         <form className="login-form" onSubmit={login}>
           <TextField
             required
