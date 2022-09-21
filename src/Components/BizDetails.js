@@ -2,12 +2,12 @@
 import React from "react";
 import { Container, Chip } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { showSingleListing } from "../redux/actions";
+// import { showSingleListing } from "../redux/actions";
 
 // import BizDetails from '../containers/BizDetails';
 const BizDetails = (props) => {
   const id = useParams().id;
-  const listing = showSingleListing.find((l) => l.id === Number(id));
+  const listing = props.listings.find((list) => list.id === Number(id));  // props.listings == the key to access the state.js in redux
   return (
     <div>
       <h2>{listing.Name}</h2>
