@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import AddNewListing from "../Components/AddNewListing";
+import AddNewListing from "../Components/AddNewListing"; //AddNewListing is the file name
 import { addNewListing } from "../redux/actions";
 
 const mapDispatchToProps = (dispatch) => {

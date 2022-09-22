@@ -8,7 +8,7 @@ import {
 } from '@mui/material'
 
 class AddNewListing extends Component {
-    state = {
+    state = {     // for class componenets only, this is the local state, when you need to acces the local state, call "this.state"
         open: false,
         id: null,
         Name: '',
@@ -19,21 +19,23 @@ class AddNewListing extends Component {
 
     toggleDialog = () => this.setState({ open: !this.state.open })
 
-    handleTextChange = (e) => {
-        const newState = { ...this.state }
-        newState[e.target.id] = e.target.value
-        this.setState(newState)
+    handleTextChange = (e) => { // resetting what's in the text box 
+        const newState = { ...this.state } //copy the state as new state
+        newState[e.target.id] = e.target.value //targeting "e.target.id" is the index inside of the newState, and whatever that value is becomes the new event.target.value
+        this.setState(newState) //puts the new values over the new memory
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        const payload = { ...this.state }
-        payload.id = this.props.carTotal + 1
+        e.preventDefault() //keep the text from deleting itself, otherwise it will keep refreshing it for you and delete everything
+        const payload = { ...this.state } // accessing local state 
+        // payload.id = this.props.listTotal + 1 //this.props should reference back to the container
         delete payload.open
         console.log("The New Listing", payload)
+        console.log(this.props)
         // add this.props.addNewListing function here from redux actions.js
         // also add this.setState to close the dialog
         this.props.addNewListing(payload)
+        
         this.setState({ open: false })
     }
 

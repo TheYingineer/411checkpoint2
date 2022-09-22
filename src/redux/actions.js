@@ -1,7 +1,7 @@
 export const addNewListing = (listings) => {
     return {
       type: "ADD_LISTINGS",
-      value: listings,
+      value: listings, // need to match reducer
     };
   };
   
